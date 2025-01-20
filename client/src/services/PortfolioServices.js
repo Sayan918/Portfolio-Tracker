@@ -1,5 +1,5 @@
-const baseURL = 'http://localhost:5000/api/shares/'
-
+// const baseURL = 'http://localhost:5000/api/shares/'
+const baseURL = 'https://portfolio-tracker-backend-x9s4.onrender.com/api/shares/'
 export const getHeldShares = () => {
     return fetch(baseURL)
     .then(res => res.json())
