@@ -7,7 +7,8 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-MongoClient.connect('mongodb://localhost:27017', {useUnifiedTopology: true})
+const uri = 'mongodb+srv://sayanh918:ikx9HQIXe3bDJhSX@portfoliotracker.yqxhv.mongodb.net/';
+MongoClient.connect(uri, {useUnifiedTopology: true})
 .then((client) => {
     const db = client.db('portfolio');
     const sharesCollection = db.collection('shares');
